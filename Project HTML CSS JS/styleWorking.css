@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#facebook img {
+  padding-bottom: 4px;
+  padding-left: 6px;
+  width: 30px;
+}
+
+header nav {
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(83, 227, 220);
+}
+header nav .logo {
+  text-align: left;
+}
+header nav .logo img {
+  width: 138px;
+  display: flex;
+  display: inline;
+  padding-left: 5px;
+}
+header nav .links ul li a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  padding-right: 10px;
+  display: block;
+  text-shadow: 10px, 20px, 10px, 10px;
+}
+header nav .social {
+  font-family: "Ink Free";
+  font-size: 15px;
+  padding-left: 5px;
+}
+header nav .social p {
+  color: black;
+}
+header nav .social button {
+  border: none;
+  background: none;
+}
+header nav .social button a img {
+  width: 40px;
+}
+
+.links {
+  flex-basis: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
+input:checked ~ .links {
+  max-height: unset;
+}
+
+nav label img {
+  padding-right: 5px;
+  width: 30px;
+}
+
+nav input {
+  display: none;
+}
+
+@media screen and (min-width: 560px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  nav label {
+    display: none;
+  }
+  nav input {
+    display: none;
+  }
+  nav .logo {
+    padding-left: 5px;
+  }
+  nav ul {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    font-family: "Lucida Sans Unicode";
+    font-size: 22px;
+  }
+  nav ul a {
+    text-decoration: none;
+    color: black;
+  }
+  nav .social p {
+    text-align: center;
+    font-family: "Ink Free";
+  }
+  nav .social button {
+    border: none;
+    outline: none;
+    background: none;
+  }
+  nav a img {
+    max-width: 40px;
+    width: 40px;
+  }
+  nav .menu__bar {
+    display: none;
+  }
+  nav .links {
+    max-height: unset;
+    flex-basis: unset;
+  }
+}/*# sourceMappingURL=styleWorking.css.map */
