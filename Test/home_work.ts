@@ -89,6 +89,8 @@ function countPositiveNumbersInArray(_arra, _length) {
     
 console.log(countPositiveNumbersInArray(inst, inst.length -1));
 
+
+
     
     
     
