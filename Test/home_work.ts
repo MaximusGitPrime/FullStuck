@@ -63,7 +63,7 @@
 //       console.log(bubbleSort(arr, 0));
 
 //--------------------------------5-----------------------
-let inst=  [3, -12, -5, -9, 6, -7, -15, -2, -1, -18, 24,1 ]
+let inst=  [3, -12, -5, -9, 6, -7, -15, -2, -1, -18, 24,]
 let posNum = 0
 
 function countPositiveNumbersInArray(_arra, _length) {
