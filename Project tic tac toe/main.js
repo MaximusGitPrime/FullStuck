@@ -60,13 +60,15 @@ function click() {
             }
             if (header.textContent == player1) {
                 btns[i].textContent = xSymbol;
+                
                 header.textContent = player2;
-                winnerChek();
+                setTimeout(winnerChek,1000);
             }
             else if (header.textContent == player2) {
                 btns[i].textContent = oSymbol;
+                
                 header.textContent = player1;
-                winnerChek();
+                setTimeout(winnerChek,1000)
             }
         });
     }
@@ -77,10 +79,14 @@ function winnerChek() {
     //......................btn1..................
     if (btn1.textContent != "" && btn1.textContent == btn2.textContent && btn1.textContent == btn3.textContent) {
         nameOfWinner();
+        
         header.textContent = player1;
         for (let i = 0; i < 9; i++) {
+            
             document.querySelectorAll(".btn")[i].textContent = "";
         }
+        
+        
         return;
     }
     if (btn1.textContent != "" && btn1.textContent == btn4.textContent && btn1.textContent == btn7.textContent) {
