@@ -40,36 +40,39 @@ let yZir = Math.floor(Math.random()*  ((-currentLeft/2) -(currentLeft/2)) + (cur
     countBoard.textContent = 'Miss: '+count;
     let elem1 = document.querySelector(".balloon1")!
     let elem = elem1.appendChild(imgArray[0])
+    let yHight = (document.querySelector("body")!.offsetHeight) 
+    let pos = -(Math.round(yHight));
+    console.log("pos before = " +pos);
     
-    let pos = -460;
 
     elem.addEventListener('click',ClickedIt);
   
     clearInterval(id);
-    id = setInterval(frame,);
+    id = setInterval(frame,1);
 
    function frame() {
-    let yHight = (document.querySelector("html")!.offsetHeight) 
+    
     console.log("window hight is "+ yHight);
     
     
     
     if (pos == yHight) {
           console.log(pos + " = "+ yHight);
-        console.log("if pos active");
+        
         
             // clearInterval(id);
             myMove()
     } 
     else {
-        console.log(yZir);
         pos++; 
         elem.style.left = yZir + 'px' 
-        elem.style.buttom = -100 + 'px'; 
+        // elem.style.buttom = -700 + 'px'; 
         elem.style.top = -pos + 'px'; 
+        console.log("pos = " + pos);
+        
     }
 
-        if(count==5){
+        if(count==333){
             let audio = new Audio("./mixkit-sad-game-over-trombone-471.wav");
             audio.play();
             countBoard.textContent = 'Miss: '+ count;

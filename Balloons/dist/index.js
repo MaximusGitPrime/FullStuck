@@ -29,27 +29,27 @@ function myMove() {
     countBoard.textContent = 'Miss: ' + count;
     var elem1 = document.querySelector(".balloon1");
     var elem = elem1.appendChild(imgArray[0]);
-    var pos = -460;
+    var yHight = (document.querySelector("body").offsetHeight);
+    var pos = -(Math.round(yHight));
+    console.log("pos before = " + pos);
     elem.addEventListener('click', ClickedIt);
     clearInterval(id);
-    id = setInterval(frame);
+    id = setInterval(frame, 1);
     function frame() {
-        var yHight = (document.querySelector("html").offsetHeight);
         console.log("window hight is " + yHight);
         if (pos == yHight) {
             console.log(pos + " = " + yHight);
-            console.log("if pos active");
             // clearInterval(id);
             myMove();
         }
         else {
-            console.log(yZir);
             pos++;
             elem.style.left = yZir + 'px';
-            elem.style.buttom = -100 + 'px';
+            // elem.style.buttom = -700 + 'px'; 
             elem.style.top = -pos + 'px';
+            console.log("pos = " + pos);
         }
-        if (count == 5) {
+        if (count == 333) {
             var audio = new Audio("./mixkit-sad-game-over-trombone-471.wav");
             audio.play();
             countBoard.textContent = 'Miss: ' + count;
