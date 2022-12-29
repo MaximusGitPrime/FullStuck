@@ -1,0 +1,94 @@
+            
+            
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>css animation</title>
+<style>
+
+#rotate {
+  position:absolute;left:0px;top:100px;width:100%;height:200px;
+}
+
+#rotate IMG {
+  float:left;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div>
+
+ <div id="rotate" >
+  <div>
+   <img src="https://maxw.com/b1.png" />
+   <img src="http://www.vicsjavascripts.org/StdImages/1.gif" />
+   <img src="http://www.vicsjavascripts.org/StdImages/1.gif" />
+   <img src="http://www.vicsjavascripts.org/StdImages/1.gif" />
+  </div>
+ </div>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+var zxcRotate={
+
+ init:function(o){
+  var p=document.getElementById(o.ID),ms=o.Animate,b=p?p.getElementsByTagName('DIV')[0]:null,i=b?b.getElementsByTagName('IMG'):[],bc;
+  if (i[0]){
+   p.style.overflow='hidden';
+   b.style.position='absolute';
+   b.style.width='3000px';
+   o.bc=b.cloneNode(true);
+   o.bc.style.top='0px';
+   o.p=p;
+   o.lgth=i.length;
+   o.b=[b,'left'];
+   o.lst=i[o.lgth-1];
+   b.appendChild(o.bc);
+   o.ms=typeof(ms)=='number'&&ms>0?ms*1000:10000;
+   this.rotate(o);
+  }
+ },
+
+ rotate:function(o){
+  var i=o.p.getElementsByTagName('IMG'),sz,z0=0;
+  for (;z0<i.length;z0++){
+   i[z0].style.marginLeft=(o.p.offsetWidth-i[0].width*o.lgth)/o.lgth+'px';
+  }
+  sz=o.lst.width+o.lst.offsetLeft;
+  o.bc.style.left=sz+'px';
+  this.animate(o,o.b,-sz,0,new Date(),o.ms);
+ },
+
+
+ animate:function(o,a,f,t,srt,mS){
+  clearTimeout(a[4]);
+  var oop=this,ms=new Date()-srt,n=(t-f)/mS*ms+f;
+  if (isFinite(n)){
+   a[0].style[a[1]]=n+'px';
+  }
+  if (ms<mS){
+   a[4]=setTimeout(function(){ oop.animate(o,a,f,t,srt,mS); },10);
+  }
+  else {
+   a[0].style[a[1]]=t+'px';
+   oop.rotate(o);
+  }
+ }
+
+
+}
+
+zxcRotate.init({
+ ID:'rotate',
+ Animate:10
+});
+
+/*]]>*/
+</script>
+</body>
+</html>

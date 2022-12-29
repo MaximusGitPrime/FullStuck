@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+  
+    background-image: url(https://images.template.net/115288/free-pastel-balloons-background-1sczk.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+img{
+    width: 100px;
+    height: 150px;
+    background-image: none;
+}
+.ballon1{
+    position:absolute;
+    height:160px;
+}
+img{
+    position: relative;
+}
+.scoreTabele{
+    margin-left: 10px;
+    background-color: aqua;
+    width: 120px;
+    border: 1px inset black;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    padding-left: px;
+    
+    
+}
+.miss{
+    width: 100%;
+    border-top: 1px inset black;
+    padding-left: 8px;
+}
+.score{
+    width:100%
+}
+#musicOn img{
+    width: 20px;
+    height: 20px;
+}
+#musicPause img{
+    width: 20px;
+    height: 20px;
+}
