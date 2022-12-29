@@ -37,7 +37,7 @@ function myMove() {
     id = setInterval(frame, 1);
     function frame() {
         console.log("window hight is " + yHight);
-        if (pos == yHight) {
+        if (pos == yHight - 300) {
             console.log(pos + " = " + yHight);
             // clearInterval(id);
             myMove();

@@ -56,7 +56,7 @@ let yZir = Math.floor(Math.random()*  ((-currentLeft/2) -(currentLeft/2)) + (cur
     
     
     
-    if (pos == yHight) {
+    if (pos == yHight-300) {
           console.log(pos + " = "+ yHight);
         
         
