@@ -49,8 +49,13 @@ let yZir = Math.floor(Math.random()*  ((-currentLeft/2) -(currentLeft/2)) + (cur
     id = setInterval(frame,);
 
    function frame() {
-      
-      if (pos == 290) {
+    let yHight = (document.querySelector("html")!.offsetHeight) 
+    console.log("window hight is "+ yHight);
+    
+    
+    
+    if (pos == yHight) {
+          console.log(pos + " = "+ yHight);
         console.log("if pos active");
         
             // clearInterval(id);

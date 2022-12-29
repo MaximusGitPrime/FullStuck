@@ -34,7 +34,10 @@ function myMove() {
     clearInterval(id);
     id = setInterval(frame);
     function frame() {
-        if (pos == 290) {
+        var yHight = (document.querySelector("html").offsetHeight);
+        console.log("window hight is " + yHight);
+        if (pos == yHight) {
+            console.log(pos + " = " + yHight);
             console.log("if pos active");
             // clearInterval(id);
             myMove();
