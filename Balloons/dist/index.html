@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <audio id="myAudio" loop>
+        <source src="./Circus-music.mp3" type="audio/mpeg">
+        Your browser dose not support the audio element.
+    </audio>
+    <button onclick="playAudio(); " type="button" id="musicOn"><img src="./NicePng_volume-icon-png_2039774.png" alt=""></button>
+    <button onclick="pauseAudio()" type="button " id="musicPause"><img src="./NicePng_audio-png_1095591.png" alt=""></button>
+
+    <h1>Welcome to Balloones Game</h1>
+    <div class="scoreTabele">
+    <h2 class="score">Score: </h2>
+    <h2 class="miss">Miss: </h2>
+</div>
+    <input type="submit" src="Cartoon-start-button-icon-on-transparent-background-PNG.png"  value="Start " id="start" >
+    <div class="balloonLoc">
+        <div class="balloon1"></div>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
